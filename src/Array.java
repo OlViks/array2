@@ -2,10 +2,16 @@ public class Array {
     public static void main(String[] args) {
         System.out.println("Массив 2.1");
 
+        int[] spent = generateRandomArray();
+
+        for (int i = 0; i < 30; i++) {
+            System.out.print(spent[i] + " ");
+        }
+        System.out.println(" ");
+
         //Задание 1
         System.out.println("Задание №1");
 
-        int[] spent = generateRandomArray();
         int sum = 0;
         for (int spen : spent){
             sum += spen;
@@ -32,11 +38,7 @@ public class Array {
         //Задание 3
         System.out.println("Задание №3");
 
-        double sum1 = 0;
-        for (int spen : spent) {
-            sum1 = sum1 + spen;
-        }
-        double average = sum1 / 30;
+        double average = (double) sum / spent.length;
         String str = String.format("Средняя сумма трат за месяц составила - %.2f рублей", average);
         System.out.println(str);
     }
